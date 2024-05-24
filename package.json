@@ -1,0 +1,29 @@
+{
+  "scripts": {
+    "nodemon": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "name": "node-app",
+  "version": "1.0.0",
+  "description": "NodeJs First",
+  "main": "server.js",
+  "dependencies": {
+    "chokidar": "^3.6.0",
+    "debug": "^4.3.4",
+    "dotenv": "^16.4.5",
+    "ignore-by-default": "^1.0.1",
+    "minimatch": "^3.1.2",
+    "pstree.remy": "^1.1.8",
+    "semver": "^7.6.2",
+    "simple-update-notifier": "^2.0.0",
+    "supports-color": "^5.5.0",
+    "touch": "^3.1.1",
+    "undefsafe": "^2.0.5",
+    "uuid": "^9.0.1"
+  },
+  "author": "Jasur",
+  "license": "ISC"
+}
