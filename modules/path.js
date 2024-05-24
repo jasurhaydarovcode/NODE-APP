@@ -1,4 +1,4 @@
-//PATH
+// ************** PATH METHODS ************** //
 const path = require('path')
 
 // console.log(__dirname);
