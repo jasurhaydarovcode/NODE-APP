@@ -7,6 +7,7 @@ const server = http.createServer((req, res) => {
         <html>
             <head>
                 <title>NodeJs</title>
+                <link rel="icon" href="https://seeklogo.com/images/N/node-js-logo-F4F55CD2D0-seeklogo.com.png"></link>
                 <style>
                     body {
                         background-image: url('https://tailwindcss.com/_next/static/media/hero-dark@90.dba36cdf.jpg');
