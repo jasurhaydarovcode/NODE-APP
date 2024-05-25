@@ -7,11 +7,57 @@ const server = http.createServer((req, res) => {
         <html>
             <head>
                 <title>NodeJs</title>
+                <style>
+                    body {
+                        background-image: url('https://tailwindcss.com/_next/static/media/hero-dark@90.dba36cdf.jpg');
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 90vh;
+                        user-select: none;
+                    }
+                    .message-input {
+                        margin-top: 20px;
+                        padding: 9px 20px;
+                        border-radius: 5px;
+                        border: 1px solid #0ae5e9;
+                        font-size: 16px;
+                        &::placeholder {
+                            color: #0ae5e9;
+                        }
+                    }
+                    .message-btn {
+                        background-color: #0ae5e9;
+                        // color: white;
+                        font-weight: bold;
+                        padding: 11px 20px;
+                        color: white;
+                        border: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+                    }
+                    .active-focus-hover {
+                        &:focus {
+                            outline: none;
+                            border: 2px solid #0ae5e9;
+                        }
+                        &:active {
+                            box-shadow: 0 0 10px #0ae5e9;
+                        }
+                        &:hover {
+                            box-shadow: 0 0 10px #0ae5e9;
+                            transition: all 0.3s ease-in-out;
+                        }
+                    }
+                 </style>
             </head>
             <body>
-                <form action="/message" method="POST">
-                    <input type="text" name="message">
-                    <button type="submit">Send</button>
+                <form action="/message" method="POST" class="message-form">
+                    <input type="text" name="message" placeholder="Request" class="message-input active-focus-hover">
+                    <button type="submit" class="message-btn active-focus-hover">Send</button>
                 </form>
             </body>
         </html>
@@ -31,14 +77,10 @@ const server = http.createServer((req, res) => {
         })
         res.end();
     }
-    // // About Page
-    // else if(req.url === '/about'){
-    //     res.end('<h1>About Page</h1>')
-    // }
     // // 404 Page
     // else{
     //     res.end('<body style="background: #000;"></body> <p style="color: #fff;">404 Page not found</p>')
-    // }
+    // }    
 });
 
 const PORT = process.env.PORT || 2006;
