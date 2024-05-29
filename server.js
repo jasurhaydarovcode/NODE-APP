@@ -87,5 +87,5 @@ const server = http.createServer((req, res) => {
 const PORT = process.env.PORT || 2006;
 
 server.listen(PORT, () => {
-    console.log('Server is running on PORT: ' + PORT);
+    console.log('http://localhost:2006/\nServer is running on PORT: ' + PORT);
 })
